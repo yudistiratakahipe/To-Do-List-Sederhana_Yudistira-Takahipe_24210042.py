@@ -63,12 +63,18 @@ def main():
             list_tasks()
         elif choice == "3":
             list_tasks()
-            index = int(input("Nomor tugas yang selesai: "))
-            mark_done(index)
+            try:
+                index = int(input("Nomor tugas yang selesai: "))
+                mark_done(index)
+            except ValueError:
+                print("Masukkan angka yang valid.")
         elif choice == "4":
             list_tasks()
-            index = int(input("Nomor tugas yang akan dihapus: "))
-            delete_task(index)
+            try:
+                index = int(input("Nomor tugas yang akan dihapus: "))
+                delete_task(index)
+            except ValueError:
+                print("Masukkan angka yang valid.")
         elif choice == "5":
             print("Sampai jumpa!")
             break
